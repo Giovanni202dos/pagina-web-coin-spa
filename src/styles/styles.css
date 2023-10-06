@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #3c484e;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.Header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header a {
+  text-decoration: none;
+  color: #15302C;
+}
+.Header {
+  background-color: #C0C8C7;
+}
+
+.Main {
+  padding: 10px;
+  grid-template-columns: minmax(auto, 976px);
+  display: grid;
+  justify-content: center;
+}
+
+.Characters {
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+  grid-row-gap: 1.5em;
+  display: grid;
+  margin-top: 8px;
+}
+
+.Characters-inner {
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 1.5rem;
+  grid-row-gap: 1.5em;
+  display: grid;
+}
+
+.Characters-card {
+  text-decoration: none;
+  box-shadow: 8px 14px 38px rgba(48, 51, 55, 0.77);
+  border-radius: 5px;
+  margin: 0 0 20px 0;
+  display: block;
+  animation-duration: 2s;
+  animation-name: fade;
+  background-color: #eee9e8eb;
+}
+
+.Characters-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.Characters-card h2 {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.Characters-card h3 {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+  margin: 20px;
+}
+
+.Characters-item {
+  text-decoration: none;
+  box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+  border-radius: 5px;
+  margin: 0 0 20px 0;
+  display: block;
+  animation-duration: 2s;
+  animation-name: fade;
+  
+}
+
+
+
+#Characters-item{
+  /* border: solid 2px goldenrod;*/
+  border-radius: 5% 5% 4% 4%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.31); /* Efecto de sombra */
+  background-color: #f3ecec;
+}
+
+#Characters-item:hover{
+  transform: translateY(-3px);
+  animation: sacudir 0.5s infinite alternate;
+}
+@keyframes sacudir {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateY(-5px); /* Mueve la imagen -5px a la izquierda al 100% de la animación */
+  }
+}
+
+/* #Characters-item:hover img{
+  border: #026C86 solid 2px;
+} */
+
+
+.Characters-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.Characters-item h2 {
+  font-size: 18px;
+  font-weight: 300;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Characters-item a {
+  text-decoration: none;
+  color: #026C86;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.Main-loading {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#section-cambio-page{
+  display: flex;
+  justify-content: center; 
+  /* background-color: aqua; */
+  margin: 8px;
+}
+
+.conteo-de-paginas{
+  display: contents;
+  
+}
+
+.retroceder-boton{
+  width: 86px;
+  margin-right: 3px;
+
+  
+  border-radius: 5px;
+  cursor: pointer;
+}
+.retroceder-boton:active{
+  background-color: #3498db;
+}
+.avanzar-boton{
+  width: 86px;
+  margin-left: 3px;
+
+  
+  border-radius: 5px;
+  cursor: pointer;
+}
+.avanzar-boton:active{
+  background-color: #3498db;
+}
+#Main{
+  /*background-image: url('https://images7.alphacoders.com/633/633262.png');*/ /* Ruta de la imagen de fondo */
+  background-image: url('./src/assets/img/white.png');
+  background-attachment: fixed; /* Fija la imagen de fondo */
+  background-size: cover; /* Cubre todo el fondo */
+  background-position: center top; /* Alinea la imagen de fondo al centro y arriba */
+  margin: 0; /* Elimina el margen predeterminado del body */
+  padding: 0; /* Elimina el relleno predeterminado del body */
+}
+
+#Main a{
+  text-decoration: none;
+}
+
+#Main .Header-main .Header-nav a{
+  border: #3e515e solid 2px;
+  border-radius: 10px;
+}
+#Main .Header-main .Header-nav a:active{
+  background-color: #3e515e;
+  color: white;
+}
+
+#contenedor-main-1{
+    background-image: url('./src/assets/img/white.png'); 
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    background-size: cover; /* Cubre todo el fondo */
+    background-position: center top; /* Alinea la imagen de fondo al centro y arriba */
+    margin: 0; /* Elimina el margen predeterminado del body */
+    padding: 0; /* Elimina el relleno predeterminado del body */
+    height: 35rem;
+    width: 100%;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+#Main-black{
+  background-color: #060a06;
+}
+#Main-black .Header {
+  background-color: #292c2c;
+}
+
+#Main-black #content {
+  color: white;
+}
+#Main-black .Header-main .Header-logo h1 a{
+  color: white;
+}
+
+#Main-black .Header-main .Header-nav a{
+  color: white;
+  border: #3e515e solid 2px;
+  border-radius: 10px;
+}
+
+#Main-black .Header-main .Header-nav a:active{
+  background-color: #3e515e;
+  color: white;
+}
+
+#Main-black #contenedor-main-1{
+  background-image: url('./src/assets/img/black.png');
+}
+
+#Main-black #Characters-item{
+  background-color: rgba(15, 15, 15, 0.91);
+  
+}
+#Main-black #Characters-item a{
+  color: white;
+  text-decoration: none;
+}
+#Main-black h2{
+  color: rgb(239, 243, 12);
+}
+
+#Main-black .inicio-boton{
+  border: white solid 2px;
+}
+#Main-black .Characters-card{
+  background-color: rgba(15, 15, 15, 0.91);
+  color: white;
+}
+
+.inicio-boton{
+  background-color: #060a06;
+  height: 30px;
+  width: 100px;
+  border-radius: 3%;
+  border: #060a06 solid 1px;
+}
+
+.inicio-boton:hover{
+  background-color: #3498db;
+  border: #060a06 solid 1px;
+}
+.inicio-boton a{
+  text-decoration: none;
+  color: #f3f3f3;
+  display: block;
+  height: 100%;
+  text-align: center;
+
+}
+.inicio-boton:hover a{
+  color: #060a06;
+}
+
+.activar{
+  background-color: #14f820;
+}
+
+.nada-para-mostrar{
+  width:323%; 
+  height:500px;
+  text-align: center;
+  color: #e90f0f;
+  margin-top: 59%;
+  transform: rotate(-45deg);
+  margin-left: 60%;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.footer{
+  background-color: #C0C8C7;
+  height: 205px;
+}
+#Main-black .footer{
+  background-color: #292c2c;
+  height: 205px;
+  color: white;
+}
+
+.nav-botones{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.intro{
+  background-color: #b1b3b5a8;
+}
+.educacion{
+  background-color: #888a8b;
+}
+.intereses{
+  background-color: #696a6b;
+}
+.contacto{
+  background-color: #3f4041;
+  color: white;
+}
+
+
+
+
+/**/
+.valor-negativo{
+  color: red;
+}
+.valor-positivo{
+  color: rgb(42, 236, 4);
+}
+
+.Characterss {
+  display: grid;
+}
+
+.Coin {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5rem;
+  grid-row-gap: 1.5em;
+  display: grid;
+}
+.Characters-card a{
+  color: #3c484e;
+  border: solid 2px #a7aaa7;
+  text-decoration: none;
+}
+
+#Main-black .Characters-card a{
+  border: #d4d4d4 solid 2px;
+  color: white;
+}
+
+/* Estilos para el botón deslizable */
+
+/* #section-boton-apariencia{
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 6px;
+}  */
+.switch-container {
+  display: flex;
+  justify-content: end;
+  
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 20px;
+}
+
+.switch input[type="checkbox"] {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #615f5f;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 13px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* fin Estilos para el botón deslizable */
